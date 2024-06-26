@@ -26,6 +26,10 @@
   --black-60: #464b4d;
   --black-80: #282b2c;
 
+  --primary-bg: #eef3f5;
+  --primary-bg: #eff2f4;
+
+  --background-10: #fcfcfc;
   --background-50: #e5f8ff;
   --background-100: #ccf1ff;
   --background-200: #99e2ff;
@@ -105,38 +109,49 @@ html {
 } /* 16px */
 
 h1 {
-  font-size: 3.053rem; /* 48.8px */
+  /* font-size: 3.053rem; 48.8px */
+  font-size: 2.027; /* 48.8px */
 }
 
 h2 {
-  font-size: 2.442rem; /* 39.04px */
+  /* font-size: 2.442rem; 39.04px */
+  font-size: 1.802rem; /* 39.04px */
 }
 
 h3 {
-  font-size: 1.954rem; /* 31.2px */
+  /* font-size: 1.954rem; 31.2px */
+  font-size: 1.602rem; /* 31.2px */
 }
 
 h4 {
-  font-size: 1.563rem; /* 24.96px */
+  /* font-size: 1.563rem; 24.96px */
+  font-size: 1.424rem; /* 24.96px */
 }
 
 h5 {
-  font-size: 1.25rem; /* 20px */
+  /* font-size: 1.25rem; 20px */
+  font-size: 1.266rem; /* 20px */
 }
 
 h6,
 .h6 {
-  font-size: 1.13rem; /*18.08px*/
+  font-size: 1.125rem; /*18.08px*/
 }
 
 small {
-  font-size: 0.8rem; /* 12.8px */
+  font-size: 0.889rem; /* 12.8px */
+}
+.small {
+  font-size: 0.889rem;
+}
+.extra-small {
+  font-size: 0.79rem;
 }
 body {
   font-family: "Rubik", Roboto, system-ui, "Segoe UI", Helvetica, Arial,
     sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-weight: 400;
-  color: var(--text-950);
+  color: var(--text-900);
 }
 .container {
   display: grid;
@@ -150,6 +165,7 @@ body {
 
   padding: var(--space-3x);
   color: var(--background);
+  color: #fcfdff;
 }
 .sidebar .title {
   display: grid;
@@ -182,30 +198,31 @@ body {
 /* header */
 .header {
   padding: var(--space-3x) var(--space-5x);
-  background-color: var(--background);
+  background-color: var(--background-10);
   display: grid;
   grid-template-columns: 2fr 1fr;
   justify-content: space-between;
   column-gap: var(--space-2x);
-  row-gap: var(--space-4x);
+  row-gap: var(--space-2x);
+
+  z-index: 2;
 }
 .header .search-wrapper {
-  /* background-color: lightblue; */
   display: grid;
   grid-template-columns: auto 1fr;
   align-items: center;
   gap: var(--space-2x);
 }
 .header .profile-wrapper {
-  /* background-color: var(--accent-200); */
   display: grid;
   grid-template-columns: auto auto 1fr;
-  justify-self: center;
+  justify-self: end;
+  padding-right: var(--space-2x);
   align-items: center;
   gap: var(--space-2x);
 }
 .profile-wrapper p {
-  font-weight: bold;
+  font-weight: 600;
 }
 .header .profile-bar {
   display: grid;
@@ -220,9 +237,13 @@ body {
   align-items: center;
   gap: var(--space-2x);
 }
+.profile-bar .left-section p {
+  font-weight: 500;
+}
 .profile-bar .right-section {
   display: grid;
   grid-auto-flow: column;
+  /* grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); */
   align-items: center;
   justify-items: center;
   gap: var(--space-1x);
@@ -258,7 +279,7 @@ input[type="text"]:focus-visible {
 /* content */
 .content {
   padding: var(--space-3x);
-  background-color: var(--primary-50);
+  background-color: var(--primary-bg);
   display: grid;
   grid-template-columns: 3fr 1fr;
   gap: var(--space-4x);
@@ -274,18 +295,22 @@ input[type="text"]:focus-visible {
 .projects-container .project-card {
   min-height: 240px;
   border-radius: var(--space-2x);
-  background-color: var(--background);
+  background-color: var(--background-10);
   display: grid;
   grid-template-columns: calc(var(--space-1x) * 1.25) 1fr;
   overflow-x: hidden;
 }
 .light-shadow {
-  box-shadow: 1px 1px 2px 1px var(--black-10);
+  box-shadow: 2px 2px 4px 1px var(--black-10);
+}
+.medium-shadow {
+  box-shadow: 4px 4px 8px 2px var(--black-10);
 }
 .project-card .content-section {
   padding: var(--space-3x);
   display: grid;
   align-content: space-between;
+  gap: var(--space-2x);
 }
 .project-card .icon-container {
   justify-self: end;
@@ -296,9 +321,11 @@ input[type="text"]:focus-visible {
 .project-card p {
   color: var(--black-30);
 }
-.content h4,
 .content h5 {
-  margin-bottom: var(--space-3x);
+  margin-bottom: var(--space-2x);
+}
+.content h6 {
+  margin-bottom: var(--space-1x);
 }
 .project-card .border {
   background-color: var(--secondary);
@@ -309,7 +336,7 @@ input[type="text"]:focus-visible {
 .announcement-card {
   padding: var(--space-3x);
   border-radius: var(--space-2x);
-  background-color: var(--background);
+  background-color: var(--background-10);
   display: grid;
   gap: var(--space-1x);
 }
@@ -319,19 +346,13 @@ input[type="text"]:focus-visible {
 .announcement-item .ann-title {
   font-weight: 500;
 }
-.announcement-item .small {
+.announcement-item .extra-small {
   color: var(--black-30);
-}
-.small {
-  font-size: 0.8rem;
-}
-.small-normal {
-  font-size: 0.9rem;
 }
 .trending-card {
   padding: var(--space-3x);
   border-radius: var(--space-2x);
-  background-color: var(--background);
+  background-color: var(--background-10);
   display: grid;
   gap: var(--space-3x);
 }
@@ -346,4 +367,27 @@ input[type="text"]:focus-visible {
 }
 .trending-item p:last-child {
   color: var(--black-30);
+}
+.filter-background {
+  filter: invert(98%) sepia(47%) saturate(2007%) hue-rotate(179deg)
+    brightness(108%) contrast(112%);
+}
+.filter-text {
+  filter: invert(6%) sepia(84%) saturate(444%) hue-rotate(149deg)
+    brightness(95%) contrast(102%);
+}
+.profile-pic {
+  height: 48px;
+  border-radius: 50%;
+}
+.big-pic {
+  height: 64px;
+}
+.img {
+  object-fit: contain;
+  width: 100%;
+  max-height: 400px;
+}
+.project-card .img {
+  margin-bottom: var(--space-1x);
 }

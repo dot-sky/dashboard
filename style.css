@@ -330,6 +330,11 @@ input[type="text"]:focus-visible {
 .project-card .border {
   background-color: var(--secondary);
 }
+.aside-cards {
+  display: grid;
+  gap: var(--space-4x);
+  align-content: start;
+}
 .announcement-section hr {
   border: 1px solid var(--black-20);
 }
@@ -346,9 +351,10 @@ input[type="text"]:focus-visible {
 .announcement-item .ann-title {
   font-weight: 500;
 }
-.announcement-item .extra-small {
+.light-text {
   color: var(--black-30);
 }
+
 .trending-card {
   padding: var(--space-3x);
   border-radius: var(--space-2x);
@@ -390,4 +396,13 @@ input[type="text"]:focus-visible {
 }
 .project-card .img {
   margin-bottom: var(--space-1x);
+}
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.profile-bar .left-section .flex {
+  font-size: larger;
+  gap: var(--space-1x);
 }

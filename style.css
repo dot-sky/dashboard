@@ -260,23 +260,27 @@ input[type="text"]:focus-visible {
   padding: var(--space-3x);
   background-color: var(--primary-50);
   display: grid;
-  grid-template-columns: 4fr 1fr;
+  grid-template-columns: 3fr 1fr;
   gap: var(--space-4x);
 }
+.project-section {
+  grid-row: 1/3;
+}
 .projects-container {
-  margin-top: var(--space-3x);
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: var(--space-4x);
 }
 .projects-container .project-card {
   min-height: 240px;
-  box-shadow: 1px 1px 2px 1px var(--black-10);
   border-radius: var(--space-2x);
   background-color: var(--background);
   display: grid;
   grid-template-columns: calc(var(--space-1x) * 1.25) 1fr;
   overflow-x: hidden;
+}
+.light-shadow {
+  box-shadow: 1px 1px 2px 1px var(--black-10);
 }
 .project-card .content-section {
   padding: var(--space-3x);
@@ -290,9 +294,56 @@ input[type="text"]:focus-visible {
   gap: var(--space-3x);
 }
 .project-card p {
-  margin-top: var(--space-1x);
   color: var(--black-30);
+}
+.content h4,
+.content h5 {
+  margin-bottom: var(--space-3x);
 }
 .project-card .border {
   background-color: var(--secondary);
+}
+.announcement-section hr {
+  border: 1px solid var(--black-20);
+}
+.announcement-card {
+  padding: var(--space-3x);
+  border-radius: var(--space-2x);
+  background-color: var(--background);
+  display: grid;
+  gap: var(--space-1x);
+}
+.announcement-item {
+  padding: var(--space-1x);
+}
+.announcement-item .ann-title {
+  font-weight: 500;
+}
+.announcement-item .small {
+  color: var(--black-30);
+}
+.small {
+  font-size: 0.8rem;
+}
+.small-normal {
+  font-size: 0.9rem;
+}
+.trending-card {
+  padding: var(--space-3x);
+  border-radius: var(--space-2x);
+  background-color: var(--background);
+  display: grid;
+  gap: var(--space-3x);
+}
+.trending-item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  column-gap: var(--space-2x);
+}
+.trending-item img {
+  grid-row: 1 / 3;
+}
+.trending-item p:last-child {
+  color: var(--black-30);
 }

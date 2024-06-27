@@ -1,13 +1,14 @@
 # Projects Dashboard
 
 Dashboard that showcases some of my projects, this was made with HTML and CSS
+
 Site is responsive for small screens this was achieven by using grid, flexbox and media queries.
 
 Click on projects images or icons to see the final implementation or to view the source code.
 
 ## See it live!
 
-Link:
+Link: https://dot-sky.github.io/dashboard/
 
 ## Credits:
 

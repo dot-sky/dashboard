@@ -2,7 +2,7 @@
 
 Dashboard that showcases some of my projects, this was made with HTML and CSS
 
-Site is responsive for small screens this was achieven by using grid, flexbox and media queries.
+Site is responsive for small screens this was achieved by using grid, flexbox and media queries.
 
 Click on projects images or icons to see the final implementation or to view the source code.
 
